@@ -26,7 +26,7 @@ body{
 }
 .record-input{
     color: rgb(0, 0, 0);
-    background-image:url("shapelined-_JBKdviweXI-unsplash.jpg");
+    background-image:url("img/shapelined-_JBKdviweXI-unsplash.jpg");
     background-size:cover;
     
 }
@@ -37,7 +37,7 @@ span {
 .record-display{
     
     position: relative;
-    background-image:url("andy-holmes-uB9edsIMLdY-unsplash.jpg");
+    background-image:url("img/andy-holmes-uB9edsIMLdY-unsplash.jpg");
     background-size:cover;
 }
 .entry-form{

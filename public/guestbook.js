@@ -1,4 +1,5 @@
 
+
 const addBtn = document.getElementById("submit-btn");
 const cancelBtn = document.getElementById("cancel-btn");
 const recordContainer = document.querySelector(".record-container");
@@ -87,11 +88,11 @@ function addToList(item) {
 
 resetBtn.addEventListener("click", function () {
 
-    // Prompt the user for a password
+    
     const enteredPassword = prompt("This action is password protected: ");
-    // Check if the password is correct (replace 'yourPassword' with your actual password)
+    
     if (enteredPassword === "tygman") {
-        let audio = new Audio("ui_correct_button2-103167.mp3");
+        let audio = new Audio("sound/ui_correct_button2-103167.mp3");
             document.body.appendChild(audio);
             audio.play();
         let contactElements = document.querySelectorAll(".record-item");
@@ -102,11 +103,11 @@ resetBtn.addEventListener("click", function () {
         
         });
 
-        // Clear local storage
+        
         localStorage.removeItem("contacts");
     } else {
         setTimeout(function() {alert("Incorrect password. Access denied!")}, 100)
-        let audio = new Audio("wrong-answer-126515.mp3");
+        let audio = new Audio("sound/wrong-answer-126515.mp3");
     document.body.appendChild(audio);
     audio.play();
     }
@@ -124,7 +125,7 @@ addBtn.addEventListener("click", function () {
 
     const contact = new Contact(++id, truncatedName, truncatedNumber, truncatedWeb, truncatedPhone, truncatedComment);
     ContactArray.push(contact);
-    let audio = new Audio("interface-124464.mp3");
+    let audio = new Audio("sound/interface-124464.mp3");
     document.body.appendChild(audio);
     audio.play();
     addToList(contact);
@@ -141,7 +142,7 @@ function saveToLocalStorage() {
 
 cancelBtn.addEventListener("click", function () {
     clearInputFields();
-    let audio = new Audio("stop-13692.mp3");
+    let audio = new Audio("sound/stop-13692.mp3");
     document.body.appendChild(audio);
     audio.play();
     
