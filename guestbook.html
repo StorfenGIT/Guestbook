@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="guestbook.css" />
+    <script
+      src="https://kit.fontawesome.com/163dda6850.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="record-input">
+        <h2>Johan's Guestbook</h2>
+        <div class="entry-form">
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+
+            <label for="contact-num">E-mail:</label>
+            <input type="text" id="contact-num" />
+
+            <label for="contact-num">Website:</label>
+            <input type="text" id="web" />
+
+            <label for="contact-num">Phone number:</label>
+            <input type="text" id="phone" />
+
+            <label for="contact-num"
+              >Comments: <span>(25 characters max)</span></label
+            >
+            <input type="text" id="comment" />
+          </form>
+          <!-- Ett alert meddelande till användaren -->
+          <span class="message"></span>
+
+          <div class="input-btns">
+            <button type="submit" id="submit-btn">
+              <span>
+                <i class="fas fa-plus"></i>
+              </span>
+              Add guest
+            </button>
+
+            <button type="button" id="cancel-btn">Undo text</button>
+          </div>
+        </div>
+      </div>
+      <div class="record-display">
+        <h2>Posts:</h2>
+
+        <div class="record-container"></div>
+      
+    <button type="button" id="reset-btn">Remove all</button>
+        <div class="record-container"></div>
+
+        <audio id="backgroundMusic" loop>
+          <source src="daylight-14872.mp3" type="audio/mp3">
+          
+      </audio>
+  
+      <button id="playButton">Play music</button>
+      <button id="pauseButton">Pause music</button>
+      
+
+
+    <script src="guestbook.js"></script>
+  </body>
+</html>
