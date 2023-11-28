@@ -1,7 +1,24 @@
+const backgroundMusic = document.getElementById("backgroundMusic");
+const playButton = document.getElementById("playButton");
+const pauseButton = document.getElementById("pauseButton");
+  
+    playButton.addEventListener("click", function () {
+      backgroundMusic.play();
+    });
+  
+    pauseButton.addEventListener("click", function () {
+      backgroundMusic.pause();
+    });
 
 
-const addBtn = document.getElementById("submit-btn");
-const cancelBtn = document.getElementById("cancel-btn");
+const cancelBtn = document.getElementById("cancelBtn");
+cancelBtn.addEventListener("click", function () {
+    clearInputFields();
+    let audio = new Audio("sound/stop-13692.mp3");
+    document.body.appendChild(audio);
+    audio.play();
+    
+});
 const recordContainer = document.querySelector(".record-container");
 
 const resetBtn = document.getElementById("reset-btn");
@@ -24,8 +41,6 @@ function Contact(id, name, number, web, phone, comment) {
     this.phone = phone;
     this.comment = comment;
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("contacts") == null) {
@@ -113,40 +128,15 @@ resetBtn.addEventListener("click", function () {
     }
 });
 
-
-   
+const addBtn = document.getElementById("submit-btn");  
 addBtn.addEventListener("click", function () {
     
-    const truncatedName = name.value.slice(0, 25);
-    const truncatedNumber = number.value.slice(0, 25);
-    const truncatedWeb = web.value.slice(0, 25);
-    const truncatedPhone = phone.value.slice(0, 25);
-    const truncatedComment = comment.value.slice(0, 25);
-
-    const contact = new Contact(++id, truncatedName, truncatedNumber, truncatedWeb, truncatedPhone, truncatedComment);
-    ContactArray.push(contact);
     let audio = new Audio("sound/interface-124464.mp3");
     document.body.appendChild(audio);
     audio.play();
-    addToList(contact);
-    saveToLocalStorage();
-    clearInputFields();
+
 });
 
-function saveToLocalStorage() {
-    localStorage.setItem("contacts", JSON.stringify(ContactArray));
-}
-     
-
-
-
-cancelBtn.addEventListener("click", function () {
-    clearInputFields();
-    let audio = new Audio("sound/stop-13692.mp3");
-    document.body.appendChild(audio);
-    audio.play();
-    
-});
 
 function clearInputFields() {
     name.value = "";
@@ -155,7 +145,6 @@ function clearInputFields() {
     phone.value = "";
     comment.value = "";
 }
-
 
 
 document.addEventListener("DOMContentLoaded", function() {

@@ -16,62 +16,58 @@
       <div class="record-input">
         <h2>Johan's Guestbook</h2>
         <div class="entry-form">
-          <form>
+          <form action="/" method="post">
             <label for="name">Name:</label>
-            <input type="text" id="name" />
+            <input type="text" id="name" name="name"/>
 
             <label for="contact-num">E-mail:</label>
-            <input type="text" id="contact-num" />
+            <input type="text" id="contact-num" name="email"/>
 
             <label for="contact-num">Website:</label>
-            <input type="text" id="web" />
+            <input type="text" id="web" name="web" />
 
             <label for="contact-num">Phone number:</label>
-            <input type="text" id="phone" />
+            <input type="text" id="phone" name="number" />
 
             <label for="contact-num"
-              >Comments: <span>(25 characters max)</span></label
+              >Comments: <span>(24 characters max)</span></label
             >
-            <input type="text" id="comment" />
-          </form>
-          <!-- Ett alert meddelande till användaren -->
+            <input type="text" id="comment" name="comment" />
+          
           <span class="message"></span>
 
           <div class="input-btns">
-            <button type="submit" id="submit-btn">
+            <button type="submit" id="submit-btn">Post
               <span>
                 <i class="fas fa-plus"></i>
               </span>
-              Add guest
             </button>
-
-            <button type="button" id="cancel-btn">Undo text</button>
+            <button type="button" id="cancelBtn">Undo text</button>
+            
           </div>
-        </div>
       </div>
-      <div class="record-display">
-        <h2>Posts:</h2>
-
+      </div>
+    </form>
+    <div class="record-display">
+        <h2>Posts</h2>
+        
         <div class="record-container"></div>
-      
+        
     <button type="button" id="reset-btn">Remove all</button>
         <div class="record-container"></div>
-
         <audio id="backgroundMusic" loop>
           <source src="sound/daylight-14872.mp3" type="audio/mp3">
           
       </audio>
   
-      <button id="playButton">Play music</button>
-      <button id="pauseButton">Pause music</button>
+      <button type="button" id="playButton">Play music</button>
+      <button type="button" id="pauseButton">Pause music</button>
       
 
 
-    <script src="guestbook.js">
+    <script src="guestbook.js"></script>
+    <script src="server.js"></script>
+    
   
-    </script>
-    <script src="server.js">
-  
-    </script>
   </body>
 </html>
