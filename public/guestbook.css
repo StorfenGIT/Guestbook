@@ -167,30 +167,24 @@ span {
  }
  #playButton {
     position: absolute;
-     left: 25px;
-     top: 10px;
-     width: 120px;
-     background-color: transparent;
-     color: rgb(0, 207, 254)
+    left: 25px;
+    top: 10px;
+    width: 120px;
+    background-color: transparent;
+    color: rgb(0, 207, 254);
+     
 
  }
  #pauseButton {
     position: absolute;
-     left: 180px;
-     top: 10px;
-     width: 120px;
-     background-color: transparent;
-     color: rgb(0, 207, 254)
-
- }
- #volumeControl {
-    position: absolute;
-     left: 100px;
-     top: 80px;
-     width: 120px;
-     height: 6px;
+    right: 25px;
+    top: 10px;
+    width: 120px;
+    background-color: transparent;
+    color: rgb(0, 207, 254);
      
- }
+}
+ 
 
  @media screen and (min-width: 992px){
     .main-container{

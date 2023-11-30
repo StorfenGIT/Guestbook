@@ -101,41 +101,10 @@ function addToList(item) {
     recordContainer.appendChild(newRecordDiv);
 }
 
-resetBtn.addEventListener("click", function () {
 
-    
-    const enteredPassword = prompt("This action is password protected: ");
-    
-    if (enteredPassword === "tygman") {
-        let audio = new Audio("sound/ui_correct_button2-103167.mp3");
-            document.body.appendChild(audio);
-            audio.play();
-        let contactElements = document.querySelectorAll(".record-item");
-        contactElements.forEach(element => {
-            setTimeout(function () {element.remove(); })
-            
-                
-        
-        });
-
-        
-        localStorage.removeItem("contacts");
-    } else {
-        setTimeout(function() {alert("Incorrect password. Access denied!")}, 100)
-        let audio = new Audio("sound/wrong-answer-126515.mp3");
-    document.body.appendChild(audio);
-    audio.play();
-    }
-});
 
 const addBtn = document.getElementById("submit-btn");  
-addBtn.addEventListener("click", function () {
-    
-    let audio = new Audio("sound/interface-124464.mp3");
-    document.body.appendChild(audio);
-    audio.play();
 
-});
 
 
 function clearInputFields() {
